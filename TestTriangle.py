@@ -1,34 +1,25 @@
-'''
+# -*- coding: utf-8 -*-
+"""
+Updated Jan 21, 2018
+The primary goal of this file is to demonstrate a simple unittest implementation
+@author: NehharShah
 @author: Nihar Shah
-
-HW01: Testing triangle classification
-
-14 September 2022
-
-''' 
-
+"""
 import unittest
-
 from triangle import classifyTriangle
+# This code implements the unit test functionality
+# https://docs.python.org/3/library/unittest.html has a nice description of the framework
+class TestTriangles(unittest.TestCase):
+    # define multiple sets of tests as functions with names that begin
+    def testRightTriangleA(self): 
+        self.assertEqual(classifyTriangle(3,4,5),'Right','3,4,5 is a Right triangle')
 
-class TestTriangle(unittest.TestCase):
-
-    def test_equilateral_triangle(self):
-        self.assertEqual(classifyTriangle(2, 2, 2), "Equilateral triangle")
-        #print("Test for Equilateral triangle passed")
-
-    def test_right_angle(self):
-        self.assertEqual(classifyTriangle(3, 4, 5), "Right angle triangle")
-        #print("Test for Right angle triangle passed")
-
-    def test_isosceles_triangle(self):
-        self.assertEqual(classifyTriangle(4, 4, 5), "Isosceles triangle")
-        #print("Test for Equilateral triangle passed")
-    
-    def test_scalene_triangle(self):
-        self.assertEqual(classifyTriangle(10, 12, 15), "Scalene triangle")
-        #print("Test for Scalene triangle passed")
-
-
-if __name__ == "__main__":
-    unittest.main(exit=False)
+    def testRightTriangleB(self): 
+        self.assertEqual(classifyTriangle(5,3,4),'Right','5,3,4 is a Right triangle')
+        
+    def testEquilateralTriangles(self): 
+        self.assertEqual(classifyTriangle(1,1,1),'Equilateral','1,1,1 should be equilateral')
+        
+if __name__ == '__main__':
+    print('Running unit tests')
+    unittest.main()
