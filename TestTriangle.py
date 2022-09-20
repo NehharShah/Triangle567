@@ -22,7 +22,7 @@ class TestTriangle(unittest.TestCase):
         #print("Test for Right angle triangle passed")
 
     def test_isosceles_triangle(self):
-        self.assertEqual(classifyTriangle(4, 4, 5), "Isosceles triangle ")
+        self.assertEqual(classifyTriangle(4, 4, 5), "Isosceles triangle")
         #print("Test for Equilateral triangle passed")
     
     def test_scalene_triangle(self):
