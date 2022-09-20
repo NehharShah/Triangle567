@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jan 14 13:44:00 2016
-Updated Jan 21, 2018
 The primary goal of this file is to demonstrate a simple python program to classify
 triangles
 @author: NehharShah
 @author: Nihar Shah
+Date: 20 September 2022
 """
 def classifyTriangle(a,b,c):
     """
@@ -29,9 +28,9 @@ return 'Right'
     """
     # require that the input values be >= 0 and <= 200
     if a > 200 or b > 200 or c > 200:
-        return 'InvalidInput'
+        return 'InvalidInput'   
         
-    if a <= 0 or b <= b or c <= 0:
+    if a <= 0 or b <= 0 or c <= 0:
         return 'InvalidInput'
     
     # verify that all 3 inputs are integers  
@@ -43,15 +42,15 @@ return 'Right'
     # is important for correctness
     # the sum of any two sides must be strictly less than the third side
     # of the specified shape is not a triangle
-    if (a >= (b - c)) or (b >= (a - c)) or (c >= (a + b)):
+    if not ((a + b > c) or (b + c > a) or (a + c > b)):
         return 'NotATriangle'
         
     # now we know that we have a valid triangle 
-    if a == b and b == a:
+    if a == b and b == c:
         return 'Equilateral'
-    elif ((a * 2) + (b * 2)) == (c * 2):
+    elif ((a * a) + (b * b)) == (c * c) or ((c * c) + (b * b)) == (a * a) or ((a * a) + (c * c)) == (b * b):
         return 'Right'
-    elif (a != b) and  (b != c) and (a != b):
-        return 'Scalene'
+    elif a == b or b == c or a ==c:
+        return 'Isosceles'
     else:
-        return 'Isoceles'
+        return 'Scalene'
