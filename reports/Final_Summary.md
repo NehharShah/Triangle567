@@ -1,7 +1,7 @@
 # Final Testing Summary
 
 |  | TestRun1 | TestRun2 | 
-|---|---|
+|---|---| --- |
 | Tests Planned | 9 | 9 | 
 | Tests Executed | 9 | 9 | 
 | Tests Passed | 0 | 6 | 
