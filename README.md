@@ -15,7 +15,7 @@ After the changes were made to the code, the TestRun2 gave 6 passed and 3 failed
 
 # HW02b
 
-[![<NehharShah>](https://circleci.com/gh/<NehharShah>/<Triangle567>.svg?style=svg)](https://app.circleci.com/pipelines/github/<NehharShah>/<Triangle567>?branch=main&filter=all)
+[![NehharShah](https://circleci.com/gh/<NehharShah>/<Triangle567>.svg?style=svg)](https://app.circleci.com/pipelines/github/<NehharShah>/<Triangle567>?branch=main&filter=all)
 
 
 
